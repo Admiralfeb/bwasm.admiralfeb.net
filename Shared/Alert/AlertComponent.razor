@@ -1,0 +1,26 @@
+@inject AlertService AlertService
+
+<div class="alert-service">
+    @for (var c = 0; c < AlertService.messages.Count; c++)
+    {
+        <span class="alert @getAlertClass(AlertService.messages[c])">@AlertService.messages[c].message</span>
+    }
+</div>
+
+@code {
+    protected override void OnInitialized()
+    {
+        Console.WriteLine("AlertComponent:initialized");
+        AlertService.RefreshRequested += Refresh;
+    }
+
+    private string getAlertClass(IAlert alert)
+    {
+        return $"alert-{alert.alert.ToString().ToLower()}";
+    }
+    private void Refresh()
+    {
+        Console.WriteLine("AlertComponent:Refreshing");
+        StateHasChanged();
+    }
+}

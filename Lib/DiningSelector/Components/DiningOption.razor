@@ -1,0 +1,17 @@
+@inject AlertService AlertService
+
+<div class="container">
+    <h4>Options to choose from</h4>
+    <ul>
+        @foreach (var option in DiningOptions)
+        {
+            <li class="mb-0">@option <span class="oi oi-trash trash-btn" @onclick="() => DeleteItem(option)"></span></li>
+        }
+    </ul>
+    @if (!String.IsNullOrEmpty(SelectedItem))
+    {
+        <div>Selected place is: @SelectedItem</div>
+    }
+    <button class="btn btn-primary" @onclick=SelectItem>Select</button>
+    <button class="btn btn-danger" @onclick=ResetItems>Reset</button>
+</div>

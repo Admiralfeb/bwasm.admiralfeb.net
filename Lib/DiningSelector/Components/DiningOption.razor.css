@@ -1,0 +1,4 @@
+.trash-btn:hover {
+  cursor: pointer;
+  color: var(--danger);
+}

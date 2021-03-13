@@ -1,0 +1,25 @@
+﻿<nav class="navbar">
+    <a id="homeImage" href="" matTooltip="Go to the Home Page">
+        <img id="Z-img" src="/img/Z-img.png">
+    </a>
+    <NavLink class="nav-link" id="btnHome" href="" Match="NavLinkMatch.All">
+        <span class="oi oi-home" aria-hidden="true"></span>
+    </NavLink>
+    <NavLink class="nav-link" id="btnCode" href="/code">Code</NavLink>
+    <div class="ml-auto">
+        <a class="nav-link" href="mailto:Zachary@admiralfeb.net" matTooltip="Mail the owner of the site"
+            target="_blank">Contact</a>
+    </div>
+</nav>
+
+@code {
+    private bool collapseNavMenu = false;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        // do nothing
+        @* collapseNavMenu = collapseNavMenu; *@
+    }
+}

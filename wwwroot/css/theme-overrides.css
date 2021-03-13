@@ -1,0 +1,32 @@
+:root {
+  --primary: #a349a4;
+  --secondary: #536dfe;
+  --dark: #303030;
+}
+
+html,
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #303030;
+  color: white;
+}
+
+a,
+.btn-link {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.btn {
+  color: white;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}

@@ -1,19 +1,2 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
-
-html,
-body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --themePrimary: #a349a4;
-  --themeAccent: #536dfe;
-  --themeWarn: red;
-}
-
-a,
-.btn-link {
-  color: #0366d6;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: var(--themePrimary);
-}
+@import url('theme-overrides.css');

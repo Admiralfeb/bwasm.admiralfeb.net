@@ -1,7 +1,19 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+<h1 class="page-header">Welcome to @Title</h1>
 
-Welcome to your new app.
+<div class="jumbotron">
+    <p>Hiya. I'm Zachary and this is my site. It has what I think is cool and some of my coding projects can be found on
+        the <a href="/code">Code page</a></p>
+    <p>Have fun and see you around!</p>
+    <p>See below for one of the more recent Fairy Tail Opening videos. It's catchy and uplifting.</p>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="@VideoSource" frameborder="0" allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+    </div>
+</div>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+@code {
+    private string Title = "Admiralfeb's Website";
+    private string VideoSource = "https://www.youtube.com/embed/hA5P15f8i9I";
+}
