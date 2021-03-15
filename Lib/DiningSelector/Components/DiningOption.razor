@@ -12,6 +12,8 @@
     {
         <div>Selected place is: @SelectedItem</div>
     }
-    <button class="btn btn-primary" @onclick=SelectItem>Select</button>
-    <button class="btn btn-danger" @onclick=ResetItems>Reset</button>
+    <button class="btn btn-primary" @onclick=SelectItem>Select Item</button>
+    <button class="btn btn-danger" @onclick=ResetItems>Reset Items</button>
+
+    <AddDiningOption onAddItem=@AddItem />
 </div>

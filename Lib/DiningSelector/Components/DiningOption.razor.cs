@@ -25,15 +25,16 @@ namespace bwasm.admiralfeb.net.Lib.DiningSelector.Components
             SelectedItem = DiningOptions[randValue];
         }
 
-        private void AddItem(string item)
+        private void AddItem(string value)
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(item))
+                if (string.IsNullOrWhiteSpace(value))
                     throw new ArgumentException("Value cannot be blank");
-                if (DiningOptions.Contains(item, StringComparer.OrdinalIgnoreCase))
-                    throw new ArgumentException("Value already exists");
-                DiningOptions.Add(item);
+                if (DiningOptions.Contains(value, StringComparer.OrdinalIgnoreCase))
+                    throw new ArgumentException($"{value} already exists");
+                DiningOptions.Add(value);
+                DiningOptions.Sort();
             }
             catch (ArgumentException ex)
             {
